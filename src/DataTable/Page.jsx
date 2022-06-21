@@ -4,7 +4,7 @@ const Page = (props) => {
   const { pageNumber, currentPageNumber, onChange } = props
 
   const isActivePage = () => {
-    return currentPageNumber == pageNumber
+    return currentPageNumber === pageNumber
   }
 
   const renderedPageNumber = () => {
@@ -17,13 +17,13 @@ const Page = (props) => {
   }
 
   if (isActivePage()) {
-    return(
+    return (
       <li className="page-item mr-1">
         <button className="page-link button-outline" onClick={click} >{renderedPageNumber()}</button>
       </li>
     )
   }
-  return(
+  return (
     <li className="page-item mr-1">
       <button className="page-link" onClick={click} >{renderedPageNumber()}</button>
     </li>
