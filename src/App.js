@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import DataTable from './DataTable';
+// Kalder den nye index fil
+import DataTable from './DataTable/index2';
 import './App.css';
 
 class App extends Component {

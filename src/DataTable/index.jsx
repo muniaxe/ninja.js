@@ -17,7 +17,7 @@ class DataTable extends React.Component {
 
   calculateTotalNumberOfPages(rows) {
     const { rowsPerPage } = this.props
-    if (rowsPerPage == 0) return 0
+    if (rowsPerPage === 0) return 0
     return Math.ceil(rows.length / rowsPerPage)
   }
 
@@ -29,7 +29,7 @@ class DataTable extends React.Component {
     if (text) {
       rowsFound = rows.filter((row) => {
         return row.name1.toLowerCase().search(text.toLowerCase()) > -1 ||
-         (row.email && row.email.toLowerCase().search(text.toLowerCase()) > -1)
+          (row.email && row.email.toLowerCase().search(text.toLowerCase()) > -1)
       })
     }
 
@@ -56,12 +56,12 @@ class DataTable extends React.Component {
       .map(row => <Row key={row.per_id} row={row} />)
       .slice(...this.rowsInPageNumber(currentPageNumber))
 
-    return(
+    return (
       <div>
         <Search onSearch={this.search.bind(this)} />
         <table>
           <tbody>
-            { rowsToRender }
+            {rowsToRender}
           </tbody>
         </table>
         <Pagination
